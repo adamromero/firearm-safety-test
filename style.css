@@ -1,0 +1,19 @@
+@font-face {
+	font-family:'Safety Font';
+	src: url(Oswald-Medium.ttf);
+}
+
+h2 {
+	text-align:center;
+}
+
+body {
+	font-family: 'Safety Font';
+	background-color:#999966;
+	color: #333300;
+	font-size:1.5em;
+}
+
+#question_list {
+	width:25em;
+}
