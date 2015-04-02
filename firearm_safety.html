@@ -3,36 +3,15 @@
 <html lang="en">
 	<head>	
 		<meta charset="UTF-8"/>
-		<meta name="description" content="learn everything you want to know in this tutorial"/>
-		<meta name="keywords" content="html5, html, xhtml"/>
-		<meta name="robots" content="index,follow"/>
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<title>California Firearm Safety Certificate - Practice Test</title>
+		<link rel="stylesheet" type="text/css" href="firearm_safety.css"/>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="firearm_safety.js"></script>	
 	</head>
 	
 	<body>
 		<h2>California Firearm Safety Certificate - Practice Test</h2>
-			<script language="javascript" type="text/javascript">
-			
-				function checkAnswers() {
-					var numCorrect = 0;
-					if (document.frmQuestions.optQuestion1[0].checked) {
-						numCorrect++;
-					} 
-					if (document.frmQuestions.optQuestion2[0].checked) {
-						numCorrect++;
-					} 
-				}
-				
-				$("#question1").ready(function() {
-					$("#question1").fadeIn({queue: false, duration: 1500});
-					$("#question1").animate({marginLeft:'+=475px'}, 1000);
-				});
-				
-		</script>
 
-		<div id="question_list">
 			<div id="question1">
 				<form name="frmQuestions" method="post" onsubmit="checkAnswers()">
 					<p>A safe practice when handling a gun is to rest your finger on the outside 
@@ -40,13 +19,14 @@
 					(page 9) </p>
 					<input type="radio" name="optQuestion1" value="true">True <br/>
 					<input type="radio" name="optQuestion1" value="false">False <br/><br/>
-					<input type="submit" value="Check Answer"/>
+					<button type="button">Check Answer</button>
 					
 					<span class="correct">Correct</span>
 					<span class="wrong">Wrong</span>
 				</form>
+				
 				<form name="nextQuestion" method="post">
-					<input type="submit" value="Continue"/>
+					<button type="button">Continue...</button>
 				</form>
 			</div>
 			
@@ -127,7 +107,10 @@
 				<input type="radio" name="optQuestion12" value="false">False <br/><br/>
 			</div>
 			
-		</div>
+			<div id="footer">
+				<p>Copyright &copy; 2015 Adam Romero.<br/><a href="http://github.com/adamromero"/>Source code</a></p>
+			</div>
+			
 	</body>
 </html>
 

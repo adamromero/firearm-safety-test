@@ -35,4 +35,18 @@ body {
 	display:none;
 }
 
+#footer {
+	font-size:0.7em;
+	text-align:center;
+	margin-top:450px;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:visited, a:link {
+	color:#333300;
+	font-style:italic;
+}
 
