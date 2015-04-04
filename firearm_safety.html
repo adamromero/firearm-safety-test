@@ -12,103 +12,171 @@
 	<body>
 		<h2>California Firearm Safety Certificate - Practice Test</h2>
 
-			<div id="question1">
-				<form name="frmQuestions" method="post" onsubmit="checkAnswers()">
+			<div id="question_list">
+				<div id="question1">
 					<p>A safe practice when handling a gun is to rest your finger on the outside 
 					of the trigger guard or along the side of the gun until you are ready to shoot. 
 					(page 9) </p>
-					<input type="radio" name="optQuestion1" value="true">True <br/>
-					<input type="radio" name="optQuestion1" value="false">False <br/><br/>
-					<button type="button">Check Answer</button>
 					
-					<span class="correct">Correct</span>
-					<span class="wrong">Wrong</span>
-				</form>
+					<div id="answers1">
+						<input type="radio" name="optQuestion1" value="true">True <br/>
+						<input type="radio" name="optQuestion1" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					<span></span>
+					<button id="continue1" onclick="loadQuestion();">Continue</button>
+				</div>
 				
-				<form name="nextQuestion" method="post">
-					<button type="button">Continue...</button>
-				</form>
-			</div>
 			
-			<div id="question2">
-				<p>To “know your target, its surroundings and beyond,” you must consider that 
-				if the bullet misses or completely passes through the target, it could strike 
-				a person or object. (page 10)</p>
-				<input type="radio" name="optQuestion2" value="true">True <br/>
-				<input type="radio" name="optQuestion2" value="false">False <br/><br/>
-			</div>
+				<div id="question2">
+					<p>To "know your target, its surroundings and beyond," you must consider that 
+					if the bullet misses or completely passes through the target, it could strike 
+					a person or object. (page 10)</p>
+					
+					<div id="answers2">
+						<input type="radio" name="optQuestion2" value="true">True <br/>
+						<input type="radio" name="optQuestion2" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue2" onclick="loadQuestion();">Continue</button>
+				</div>
 			
-			<div id="question3">
-				<p>Drinking alcohol while handling firearms is safe if your blood alcohol level remains
-				below the legal limit. (page 11)</p>
-				<input type="radio" name="optQuestion3" value="true">True <br/>
-				<input type="radio" name="optQuestion3" value="false">False <br/><br/>
-			</div>
+				<div id="question3">
+					<p>Drinking alcohol while handling firearms is safe if your blood alcohol level remains
+					below the legal limit. (page 11)</p>
+					
+					<div id="answers3">
+						<input type="radio" name="optQuestion3" value="true">True <br/>
+						<input type="radio" name="optQuestion3" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue3" onclick="loadQuestion();">Continue</button>
+				</div>
 			
-			<div id="question4">
-				<p>Which of the following safety points should you remember when handling a gun? (page 11)</p>
-				<input type="radio" name="optQuestion4" value="a">Never shoot a gun in celebration. <br/>
-				<input type="radio" name="optQuestion4" value="b">Do not fire at water, flat or hard surfaces. <br/>
-				<input type="radio" name="optQuestion4" value="c">Wear ear and eye protection when shooting a gun. <br/>
-				<input type="radio" name="optQuestion4" value="d">All of the above. <br/><br/>
-			</div>
+				<div id="question4">
+					<p>Which of the following safety points should you remember when handling a gun? (page 11)</p>
+					<div id="answers4">
+						<input type="radio" name="optQuestion4" value="a">Never shoot a gun in celebration. <br/>
+						<input type="radio" name="optQuestion4" value="b">Do not fire at water, flat or hard surfaces. <br/>
+						<input type="radio" name="optQuestion4" value="c">Wear ear and eye protection when shooting a gun. <br/>
+						<input type="radio" name="optQuestion4" value="d">All of the above. <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue4" onclick="loadQuestion();">Continue</button>
+				</div>
 		
-			<div id="question5">
-				<p>Safety Rule Number Two is keep the gun pointed: (page 9)</p>
-				<input type="radio" name="optQuestion5" value="a">To the north.<br/>
-				<input type="radio" name="optQuestion5" value="b">In the safest possible direction. <br/>
-				<input type="radio" name="optQuestion5" value="c">Up.<br/>
-				<input type="radio" name="optQuestion5" value="d">Down.<br/><br/>
-			</div>
+				<div id="question5">
+					<p>Safety Rule Number Two is keep the gun pointed: (page 9)</p>
+					<div id="answers5">
+						<input type="radio" name="optQuestion5" value="a">To the north.<br/>
+						<input type="radio" name="optQuestion5" value="b">In the safest possible direction. <br/>
+						<input type="radio" name="optQuestion5" value="c">Up.<br/>
+						<input type="radio" name="optQuestion5" value="d">Down.<br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+
+					<span></span>
+					<button id="continue5" onclick="loadQuestion();">Continue</button>
+				</div>
 			
-			<div id="question6">
-				<p>Safety Rule Number Five is know how to properly: (page 10)</p>
-				<input type="radio" name="optQuestion6" value="a">Clear a malfunction. <br/>
-				<input type="radio" name="optQuestion6" value="b">Operate your gun.<br/>
-				<input type="radio" name="optQuestion6" value="c">Load your gun.<br/>
-				<input type="radio" name="optQuestion6" value="d">Clean your gun.<br/><br/>
-			</div>
+				<div id="question6">
+					<p>Safety Rule Number Five is know how to properly: (page 10)</p>
+					<div id="answers6">
+						<input type="radio" name="optQuestion6" value="a">Clear a malfunction. <br/>
+						<input type="radio" name="optQuestion6" value="b">Operate your gun.<br/>
+						<input type="radio" name="optQuestion6" value="c">Load your gun.<br/>
+						<input type="radio" name="optQuestion6" value="d">Clean your gun.<br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue6" onclick="loadQuestion();">Continue</button>
+				</div>
 
-			<div id="question7">
-				<p>When not using a gun, use a firearms safety device and store the gun
-				in a locked container.(page 13)</p>
-				<input type="radio" name="optQuestion7" value="true">True <br/>
-				<input type="radio" name="optQuestion7" value="false">False <br/><br/>
-			</div>
+				<div id="question7">
+					<p>When not using a gun, use a firearms safety device and store the gun
+					in a locked container.(page 13)</p>
+					<div id="answers7">
+						<input type="radio" name="optQuestion7" value="true">True <br/>
+						<input type="radio" name="optQuestion7" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue7" onclick="loadQuestion();">Continue</button>
+				</div>
 			
-			<div id="question8">
-				<p>Toddlers lack the strength to pull the trigger of a firearm.(page 8)</p>
-				<input type="radio" name="optQuestion8" value="true">True <br/>
-				<input type="radio" name="optQuestion8" value="false">False <br/><br/>
-			</div>
+				<div id="question8">
+					<p>Toddlers lack the strength to pull the trigger of a firearm.(page 8)</p>
+					<div id="answers8">
+						<input type="radio" name="optQuestion8" value="true">True <br/>
+						<input type="radio" name="optQuestion8" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue8" onclick="loadQuestion();">Continue</button>
+				</div>
 
-			<div id="question9">
-				<p>You may face misdemeanor or felony charges if you keep a loaded firearm 
-				where a child obtains and improperly uses it. (page 8)</p>
-				<input type="radio" name="optQuestion9" value="true">True <br/>
-				<input type="radio" name="optQuestion9" value="false">False <br/><br/>
-			</div>
+				<div id="question9">
+					<p>You may face misdemeanor or felony charges if you keep a loaded firearm 
+					where a child obtains and improperly uses it. (page 8)</p>
+					<div id="answers9">
+						<input type="radio" name="optQuestion9" value="true">True <br/>
+						<input type="radio" name="optQuestion9" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue9" onclick="loadQuestion();">Continue</button>
+				</div>
 
-			<div id="question10">
-				<p>There is no such thing as being too careful with children and guns. (page 8)</p>
-				<input type="radio" name="optQuestion10" value="true">True <br/>
-				<input type="radio" name="optQuestion10" value="false">False <br/><br/>
-			</div>
+				<div id="question10">
+					<p>There is no such thing as being too careful with children and guns. (page 8)</p>
+					<div id="answers10">
+						<input type="radio" name="optQuestion10" value="true">True <br/>
+						<input type="radio" name="optQuestion10" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue10" onclick="loadQuestion();">Continue</button>
+				</div>
 
-			<div id="question11">
-				<p>An important lesson children should learn is that guns are not toys. (page 9)</p>
-				<input type="radio" name="optQuestion11" value="true">True <br/>
-				<input type="radio" name="optQuestion11" value="false">False <br/><br/>
-			</div>
+				<div id="question11">
+					<p>An important lesson children should learn is that guns are not toys. (page 9)</p>
+					<div id="answers11">
+						<input type="radio" name="optQuestion11" value="true">True <br/>
+						<input type="radio" name="optQuestion11" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue11" onclick="loadQuestion();">Continue</button>
+				</div>
 			
-			<div id="question12">
-				<p>Child safety precautions only apply if you have children. (page 8)</p>
-				<input type="radio" name="optQuestion12" value="true">True <br/>
-				<input type="radio" name="optQuestion12" value="false">False <br/><br/>
+				<div id="question12">
+					<p>Child safety precautions only apply if you have children. (page 8)</p>
+					<div id="answers12">
+						<input type="radio" name="optQuestion12" value="true">True <br/>
+						<input type="radio" name="optQuestion12" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue12" onclick="loadQuestion();">Continue</button>
+				</div>
 			</div>
 			
 			<div id="footer">
-				<p>Copyright &copy; 2015 Adam Romero.<br/><a href="http://github.com/adamromero"/>Source code</a></p>
+				<p>Copyright &copy; 2015 Adam Romero.<br/>
+				<a href="http://github.com/adamromero/firearm-safety-test"/>Source code</a></p>
 			</div>
 			
 	</body>

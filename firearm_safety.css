@@ -18,6 +18,9 @@ body {
 	display:none;
 }
 
+#question_list {
+	height:600px;
+}
 
 #question1, 
 #question2, 
@@ -31,14 +34,40 @@ body {
 #question10,
 #question11,
 #question12 {
-	width:700px;
+	width:40%;
+	margin-top:100px;
 	display:none;
 }
 
+#continue1,
+#continue2,
+#continue3,
+#continue4,
+#continue5,
+#continue6,
+#continue7,
+#continue8,
+#continue9,
+#continue10,
+#continue11,
+#continue12 {
+	display:none;
+}
+
+button {
+	font-family:'Safety Font';
+	height:30px;
+	width:100px;
+	color:#333300;
+}
+
 #footer {
+	position:relative;
+	bottom:0px;
+	height:70px;
+	width:100%;
 	font-size:0.7em;
 	text-align:center;
-	margin-top:450px;
 }
 
 a {
