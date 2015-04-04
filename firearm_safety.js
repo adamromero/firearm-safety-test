@@ -8,132 +8,56 @@ $(function() {
 function loadQuestion() {
 	$("#question" + number).remove();
 	$("span").hide();
+	if (number == 15) {
+		showScore();
+	}
+	
 	number++;
 	$("#question" + number).fadeIn({queue: false, duration: 1500});
-	$("#question" + number).animate({marginLeft:'29%'}, 1000);
+	if (number % 2 == 0) {
+		$("#question" + number).css("float", "right");
+		$("#question" + number).css("margin-top", "75px");
+		$("#question" + number).animate({marginRight:'31%'}, 1000);
+	} else {
+		$("#question" + number).animate({marginLeft:'29%'}, 1000);
+	}
 	$("#question" + number).css("position", "relative");
+}
+
+function retake() {
+	location.reload();
+}
+	
+function showScore() {
+	$("#review").show();
+	$("#review").html("You got " + numCorrect + " out of 15 correct. <br/>Your score is " 
+		+ Math.round((numCorrect / 15) * 100) + "% <br/><button onclick='retake();'>Retake Test</button>");
 }
 	
 function displayCorrect() {
 	$("span").text("Correct!");
-	$("span").css("color", "#009933");
+	$("span").css("color", "#006600");
 }
 
 function displayWrong() {
 	$("span").text("Wrong!");
-	$("span").css("color", "#CC0000");
+	$("span").css("color", "#990000");
 }
 
 function checkAnswers() {
 	$("span").show();
-	if (number == 1) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers1").remove();
-		$("#continue1").css("display", "block");
-	} else if (number == 2) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers2").remove();
-		$("#continue2").css("display", "block");
-	} else if (number == 3) {
-		if ($("input:radio[value=false]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers3").remove();
-		$("#continue3").css("display", "block");
-	} else if (number == 4) {
-		if ($("input:radio[value=d]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers4").remove();
-		$("#continue4").css("display", "block");
-	} else if (number == 5) {
-		if ($("input:radio[value=b]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers5").remove();
-		$("#continue5").css("display", "block");
-	} else if (number == 6) {
-		if ($("input:radio[value=b]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers6").remove();
-		$("#continue6").css("display", "block");
-	} else if (number == 7) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers7").remove();
-		$("#continue7").css("display", "block");
-	} else if (number == 8) {
-		if ($("input:radio[value=false]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers8").remove();
-		$("#continue8").css("display", "block");
-	} else if (number == 9) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers9").remove();
-		$("#continue9").css("display", "block");
-	} else if (number == 10) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers10").remove();
-		$("#continue10").css("display", "block");
-	} else if (number == 11) {
-		if ($("input:radio[value=true]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers11").remove();
-		$("#continue11").css("display", "block");
-	} else if (number == 12) {
-		if ($("input:radio[value=false]:checked").val()) {
-			numCorrect++;
-			displayCorrect();
-		} else {
-			displayWrong();
-		}
-		$("#answers12").remove();
-		$("#continue12").css("display", "block");
+	var answerKey = {1 : "true", 2 : "true", 3 : "false", 4 : "d", 
+		5 : "b", 6 : "b", 7 : "true", 8 : "false", 9 : "true", 10 : "true",
+		11 : "true", 12 : "false", 13 : "true", 14 : "true", 15 : "true"};
+
+	if ($("input:radio[value=" + answerKey[number] + "]:checked").val()) {
+		numCorrect++;
+		displayCorrect();
+	} else {
+		displayWrong();
 	}
+	$("#answers" + number).remove();
+	$("#continue" + number).css("display", "block");	
 }
+
 

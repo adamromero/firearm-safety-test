@@ -20,6 +20,7 @@ body {
 
 #question_list {
 	height:600px;
+	border:#999966 solid 1px;
 }
 
 #question1, 
@@ -33,7 +34,10 @@ body {
 #question9,
 #question10,
 #question11,
-#question12 {
+#question12,
+#question13,
+#question14,
+#question15 {
 	width:40%;
 	margin-top:100px;
 	display:none;
@@ -50,14 +54,31 @@ body {
 #continue9,
 #continue10,
 #continue11,
-#continue12 {
+#continue12,
+#continue13,
+#continue14,
+#continue15 {
 	display:none;
+	margin-top:50px;
+}
+
+#review {
+	text-align:center;
+	margin-top:100px;
+	display:none;
+}
+
+input[type=radio] {
+	height:1.3em;
+	width:1.3em;
 }
 
 button {
 	font-family:'Safety Font';
+	font-size:0.7em;
+	margin-top:20px;
 	height:30px;
-	width:100px;
+	width:150px;
 	color:#333300;
 }
 

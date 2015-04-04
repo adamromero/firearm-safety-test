@@ -101,7 +101,7 @@
 
 				<div id="question7">
 					<p>When not using a gun, use a firearms safety device and store the gun
-					in a locked container.(page 13)</p>
+					in a locked container. (page 13)</p>
 					<div id="answers7">
 						<input type="radio" name="optQuestion7" value="true">True <br/>
 						<input type="radio" name="optQuestion7" value="false">False <br/><br/>
@@ -113,7 +113,7 @@
 				</div>
 			
 				<div id="question8">
-					<p>Toddlers lack the strength to pull the trigger of a firearm.(page 8)</p>
+					<p>Toddlers lack the strength to pull the trigger of a firearm. (page 8)</p>
 					<div id="answers8">
 						<input type="radio" name="optQuestion8" value="true">True <br/>
 						<input type="radio" name="optQuestion8" value="false">False <br/><br/>
@@ -172,11 +172,53 @@
 					<span></span>
 					<button id="continue12" onclick="loadQuestion();">Continue</button>
 				</div>
+				
+				<div id="question13">
+					<p>The importance of the “dangerous range” is that a bullet can travel far 
+					beyond the intended target. (page 27)</p>
+					<div id="answers13">
+						<input type="radio" value="true">True <br/>
+						<input type="radio" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue13" onclick="loadQuestion();">Continue</button>
+				</div>
+				
+				<div id="question14">
+					<p>The safety on a semiautomatic pistol is not foolproof. (page 17)</p>
+					<div id="answers14">
+						<input type="radio" value="true">True <br/>
+						<input type="radio" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue14" onclick="loadQuestion();">Continue</button>
+				</div>
+				
+				<div id="question15">
+					<p>Just because a cartridge fits into your firearm does not necessarily 
+					mean it is safe to shoot. (page 26)</p>
+					<div id="answers15">
+						<input type="radio" value="true">True <br/>
+						<input type="radio" value="false">False <br/><br/>
+						<button onclick="checkAnswers();">Check Answer</button>
+					</div>
+					
+					<span></span>
+					<button id="continue15" onclick="loadQuestion();">Continue</button>
+				</div>
+				
+				<div id="review">
+					<button onclick="retake();">Retake Test</button>
+				</div>
 			</div>
 			
 			<div id="footer">
 				<p>Copyright &copy; 2015 Adam Romero.<br/>
-				<a href="http://github.com/adamromero/firearm-safety-test"/>Source code</a></p>
+				<a href="http://github.com/adamromero/firearm-safety-test" target="_blank"/>Source code</a></p>
 			</div>
 			
 	</body>
