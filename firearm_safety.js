@@ -1,5 +1,6 @@
 var number = 0;
 var numCorrect = 0;
+var totalQuestions = 15
 
 $(function() {
 	loadQuestion();
@@ -8,7 +9,7 @@ $(function() {
 function loadQuestion() {
 	$("#question" + number).remove();
 	$("span").hide();
-	if (number == 15) {
+	if (number == totalQuestions) {
 		showScore();
 	}
 	
@@ -31,7 +32,7 @@ function retake() {
 function showScore() {
 	$("#review").show();
 	$("#review").html("You got " + numCorrect + " out of 15 correct. <br/>Your score is " 
-		+ Math.round((numCorrect / 15) * 100) + "% <br/><button onclick='retake();'>Retake Test</button>");
+		+ Math.round((numCorrect / totalQuestions) * 100) + "% <br/><button onclick='retake();'>Retake Test</button>");
 }
 	
 function displayCorrect() {

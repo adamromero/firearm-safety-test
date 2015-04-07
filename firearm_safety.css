@@ -9,7 +9,7 @@ h2 {
 
 body {
 	font-family: 'Safety Font';
-	background-color:#999966;
+	background-color:#7C7C53;
 	color: #333300;
 	font-size:1.5em;
 }
@@ -20,7 +20,7 @@ body {
 
 #question_list {
 	height:600px;
-	border:#999966 solid 1px;
+	border:transparent solid 1px;
 }
 
 #question1, 
