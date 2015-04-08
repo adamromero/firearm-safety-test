@@ -1,6 +1,6 @@
 var number = 0;
 var numCorrect = 0;
-var totalQuestions = 15
+var totalQuestions = 15;
 
 $(function() {
 	loadQuestion();
